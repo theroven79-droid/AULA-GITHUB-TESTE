@@ -1,5 +1,7 @@
 # Aula GitHub Teste
 
+![Linguagem](https://img.shields.io/badge/Linguagem-C%2FC%2B%2B-00599C?logo=cplusplus&logoColor=white) ![Conteúdo](https://img.shields.io/badge/Conte%C3%BAdo-Acad%C3%AAmico-blue)
+
 Repositório com exercícios de C++ para praticar entrada de dados, estruturas condicionais e funções. Os três programas estão na pasta [Atividade](Atividade/README.md).
 
 ## Organização
@@ -37,3 +39,44 @@ Os comandos geram o executável fora da pasta do repositório. Consulte o [guia 
 Os programas incluem `iostream` e `locale.h` e chamam `setlocale(LC_ALL, "portuguese")`. A exibição dos acentos depende da codificação dos arquivos e da configuração do terminal.
 
 O arquivo `teste_codigo.cpp` não tem uma função `main`; portanto, não é um quarto exercício executável.
+
+---
+
+## Trilha visual de execução
+
+```mermaid
+flowchart TD
+    A["Escolher um dos três exercícios"] --> B["Compilar o arquivo .cpp"]
+    B --> C["Executar no terminal"]
+    C --> D{"Qual exercício?"}
+    D -->|1| E["Idade: menor ou maior"]
+    D -->|2| F["Intervalo: de 10 a 20"]
+    D -->|3| G["Sinal: positivo, negativo ou zero"]
+```
+
+## Compilação rápida no Windows (Git Bash / PowerShell)
+
+Os comandos abaixo partem da **raiz do repositório**. É necessário ter `g++` no `PATH` (por exemplo, por meio do MSYS2/MinGW-w64):
+
+```bash
+g++ Atividade/exercicio_01.cpp -o idade.exe
+g++ Atividade/exercicio_02.cpp -o intervalo.exe
+g++ Atividade/exercicio_03.cpp -o sinal.exe
+```
+
+Execute o programa desejado com `./idade.exe`, `./intervalo.exe` ou `./sinal.exe`. Os três arquivos possuem `main` próprio: **não** compile todos juntos em um único executável.
+
+## Matriz de aprendizado
+
+| Conceito | Exercício | Onde verificar |
+|---|---|---|
+| Condicionais `if/else` | Maioridade | [exercicio_01.cpp](Atividade/exercicio_01.cpp) |
+| Função `void` e ponteiro `int*` | Intervalo | [exercicio_02.cpp](Atividade/exercicio_02.cpp) |
+| `float` e `else if` | Sinal numérico | [exercicio_03.cpp](Atividade/exercicio_03.cpp) |
+| Guia de testes manuais | Todos | [Atividade/README.md](Atividade/README.md) |
+
+## Perguntas frequentes
+
+**Preciso executar os arquivos `.exe` que já estão no GitHub?** Não. Você pode recompilar os `.cpp` com seu compilador. **Onde ficam os resultados?** São impressos no terminal; os exercícios não salvam arquivos. **Funciona no VS Code?** Sim, usando a extensão C/C++ ou o terminal integrado com `g++` instalado.
+
+> **Rastreabilidade:** as regras acima correspondem aos arquivos-fonte citados; não representam funcionalidades adicionais.
