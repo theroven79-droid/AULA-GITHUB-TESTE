@@ -1,20 +1,22 @@
-# 📘 Atividades — condicionais e funções
+# 📘 Atividades — Estruturas condicionais e funções
 
-[← Voltar ao repositório](../README.md)
+[← Página inicial do repositório](../README.md)
 
-Três exercícios independentes de programação em C++. Cada fonte possui `main()` e recebe entradas pelo terminal.
+Esta pasta reúne **três exercícios independentes em C++**. Cada um lê um valor pelo terminal, avalia uma condição e mostra o resultado correspondente.
 
-## Exercícios
+## 📂 Arquivos e conceitos
 
-| Arquivo | Entrada | Condição central | Técnica |
-|---|---|---|---|
-| [exercicio_01.cpp](exercicio_01.cpp) | Idade inteira | `idade < 18` | `if/else` |
-| [exercicio_02.cpp](exercicio_02.cpp) | Inteiro | `*n >= 10 && *n <= 20` | Ponteiro e função `void` |
-| [exercicio_03.cpp](exercicio_03.cpp) | Decimal (`float`) | `n > 0`, `n < 0` ou `0` | Parâmetro por valor |
+| Arquivo | Entrada | Regra utilizada |
+|---|---|---|
+| [`exercicio_01.cpp`](exercicio_01.cpp) | Número inteiro (idade) | Idade menor que 18: menor de idade; caso contrário: maior de idade. |
+| [`exercicio_02.cpp`](exercicio_02.cpp) | Número inteiro | Verifica se o valor está entre 10 e 20, inclusive. |
+| [`exercicio_03.cpp`](exercicio_03.cpp) | Número decimal (`float`) | Diferencia números positivos, negativos e iguais a zero. |
 
-## ⚙️ Compilar separadamente
+O exercício 02 utiliza uma função que recebe um ponteiro (`int *`), enquanto o exercício 03 recebe uma cópia do valor (`float`).
 
-Na raiz do repositório, com `g++` disponível:
+## ⚙️ Compilar
+
+Com `g++` instalado, execute os comandos abaixo na raiz do repositório:
 
 ```bash
 g++ Atividade/exercicio_01.cpp -o idade
@@ -22,26 +24,18 @@ g++ Atividade/exercicio_02.cpp -o intervalo
 g++ Atividade/exercicio_03.cpp -o sinal
 ```
 
-Cada comando gera **um** programa; não compile os três fontes juntos.
+Em Linux/macOS, execute o exercício desejado com `./idade`, `./intervalo` ou `./sinal`. Em Windows, execute o arquivo `.exe` correspondente.
 
 ## 🧪 Casos de teste manuais
 
-| Cenário | Entrada | Resultado conforme o código |
-|---|---:|---|
-| Idade abaixo do limite | `17` | Menor de idade |
-| Idade no limite | `18` | Maior de idade |
-| Antes do intervalo | `9` | Fora |
-| Limite inferior | `10` | Dentro |
-| Limite superior | `20` | Dentro |
-| Depois do intervalo | `21` | Fora |
-| Número negativo | `-3` | Negativo |
-| Número neutro | `0` | Zero |
-| Número positivo | `3` | Positivo |
+| Exercício | Entradas de exemplo | Resultados esperados |
+|---|---|---|
+| Idade | `17`, `18` | Menor de idade; maior de idade |
+| Intervalo | `9`, `10`, `20`, `21` | Fora; dentro; dentro; fora |
+| Sinal | `-3`, `0`, `3` | Negativo; zero; positivo |
 
-## 💡 Conceitos fundamentais
+## 💡 O que observar no código
 
-**Ponteiro:** no exercício 02, `resultado(&n)` envia o endereço da variável; a função acessa seu valor com `*n`. **Passagem por valor:** no exercício 03, `resultado(n)` recebe uma cópia do número. Em ambos, a classificação é exibida com `cout`.
+No exercício de intervalo, a expressão `resultado(&n)` passa o **endereço** da variável para a função, que utiliza `*n` para ler seu conteúdo. No exercício de sinal, `resultado(n)` passa o **valor** de `n`.
 
-## 📌 Limitações
-
-Os programas não persistem dados, não oferecem testes automatizados e não têm tratamento específico para entradas não numéricas. Os arquivos `.exe` presentes na pasta são artefatos compilados; para estudar a implementação, utilize os `.cpp`.
+Os programas não salvam dados em arquivos nem tratam explicitamente entradas não numéricas. Os executáveis `.exe` já presentes são artefatos compilados, não substitutos dos códigos-fonte.
