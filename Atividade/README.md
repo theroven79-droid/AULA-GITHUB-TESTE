@@ -2,6 +2,36 @@
 
 [Voltar ao README principal](../README.md)
 
+## 🎮 Laboratório de decisões
+
+> **Missão:** Transforme cada caso de teste em uma hipótese e confronte-a com a condição implementada nos arquivos C++. **XP = metas simbólicas de aprendizagem**, sem registro automático.
+
+| Etapa | Desafio verificável | Evidência original | XP |
+|---|---|---|--:|
+| 01 · Maioridade | Testar 17 e 18 e justificar o limite | [idade](exercicio_01.cpp) | 20 |
+| 02 · Intervalo | Testar 9, 10, 20 e 21 | [intervalo](exercicio_02.cpp) | 30 |
+| 03 · Sinal | Testar negativo, zero e positivo | [sinal](exercicio_03.cpp) | 30 |
+
+**Checklist de progresso**
+
+- [ ] Identifiquei o ponto de decisão em cada programa.
+- [ ] Compilei cada arquivo separadamente.
+- [ ] Confrontei os resultados com a tabela de casos de teste.
+
+<details>
+<summary><strong>🏆 Abrir desafio de evolução</strong></summary>
+
+Desafio avançado (a implementar): adicionar validação de entrada não numérica a uma cópia local do programa.
+
+**Critério de conclusão:** explique o que mudou, vincule o arquivo afetado e demonstre o comportamento com entradas de teste.
+
+</details>
+
+**Nota de rigor:** Os arquivos não possuem suíte automatizada; conclusões dependem da execução e análise manual.
+
+---
+
+
 Esta pasta reúne três exercícios independentes. Cada arquivo `.cpp` contém sua própria função `main` e tem um executável `.exe` correspondente no repositório.
 
 ## Conteúdo dos exercícios
