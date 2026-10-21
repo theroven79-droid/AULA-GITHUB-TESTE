@@ -1,119 +1,61 @@
-# Aula GitHub Teste
+# 🧩 Fundamentos de programação — exercícios em C++
 
-![Linguagem](https://img.shields.io/badge/Linguagem-C%2FC%2B%2B-00599C?logo=cplusplus&logoColor=white) ![Conteúdo](https://img.shields.io/badge/Conte%C3%BAdo-Acad%C3%AAmico-blue)
+Repositório acadêmico com três exercícios independentes de **entrada e saída, estruturas condicionais, funções e ponteiros**. Os exemplos foram escritos em arquivos `.cpp` e podem ser compilados separadamente com `g++`.
 
+[![C++](https://img.shields.io/badge/Linguagem-C%2B%2B-00599C?logo=cplusplus&logoColor=white)](https://isocpp.org/) [![GitHub](https://img.shields.io/badge/Plataforma-GitHub-181717?logo=github)](https://github.com/theroven79-droid/AULA-GITHUB-TESTE)
 
-## 🕹️ Trilha de desafios · Fundamentos de programação
+## 📌 Visão geral
 
-> **Sua missão:** dominar decisões em C++ por meio de três pequenos programas. Os pontos abaixo são **XP didáticos** para acompanhar seu estudo; não são registrados automaticamente pelo GitHub.
+| Exercício | Conceito | Comportamento | Código |
+|---|---|---|---|
+| 01 — Maioridade | `if/else` | Classifica idades menores que 18 como menores de idade. | [exercicio_01.cpp](Atividade/exercicio_01.cpp) |
+| 02 — Intervalo | Ponteiro e `&&` | Verifica se um número está no intervalo **inclusivo** de 10 a 20. | [exercicio_02.cpp](Atividade/exercicio_02.cpp) |
+| 03 — Sinal | `float` e `else if` | Identifica número positivo, negativo ou igual a zero. | [exercicio_03.cpp](Atividade/exercicio_03.cpp) |
 
-| Nível | Missão prática | Evidência no código | XP |
-|:--:|---|---|--:|
-| 01 · Explorador | Compilar o teste de maioridade e verificar entradas 17 e 18 | [`exercicio_01.cpp`](Atividade/exercicio_01.cpp) | 20 |
-| 02 · Analista | Testar os limites 9, 10, 20 e 21 | [`exercicio_02.cpp`](Atividade/exercicio_02.cpp) | 30 |
-| 03 · Decisor | Conferir positivo, negativo e zero | [`exercicio_03.cpp`](Atividade/exercicio_03.cpp) | 30 |
-| Bônus · Mentor | Explicar por que `resultado(&n)` passa um endereço | [`exercicio_02.cpp`](Atividade/exercicio_02.cpp) | 20 |
+Os programas usam `cin`, `cout`, `locale.h` e `setlocale`. O resultado é apresentado no terminal, sem persistência em arquivos ou banco de dados.
 
-**Progresso manual**
+## 📂 Estrutura
 
-- [ ] Compilar os três arquivos individualmente.
-- [ ] Testar os limites de cada condicional.
-- [ ] Explicar a diferença entre passagem por ponteiro e por valor.
-- [ ] Consultar os [casos de teste documentados](Atividade/README.md).
+```text
+AULA-GITHUB-TESTE/
+├── Atividade/
+│   ├── README.md
+│   ├── exercicio_01.cpp
+│   ├── exercicio_02.cpp
+│   └── exercicio_03.cpp
+├── README.md
+├── teste_codigo.cpp
+└── teste.txt
+```
 
-<details>
-<summary><strong>🏅 Conquistas e critérios de conclusão</strong></summary>
+A pasta `Atividade` também contém executáveis `.exe`. `teste_codigo.cpp` é somente um arquivo de teste, sem `main`, e `teste.txt` está vazio.
 
-| Conquista | Critério |
-|---|---|
-| 🥉 Primeira compilação | Executar o exercício de idade com sucesso |
-| 🥈 Mestre das condições | Justificar os resultados nos limites 10 e 20 |
-| 🥇 Trio concluído | Compilar e testar os três exercícios |
-| 💎 Código compreendido | Explicar ponteiros e passagem de parâmetros |
+## ⚙️ Compilação e execução
 
-Esses títulos são marcos de estudo, **não certificados ou verificações automáticas**.
-
-</details>
-
-**🧩 Desafio extra:** modifique uma cópia local do exercício de idade para rejeitar números negativos; a validação ainda não existe no fonte original.
-
----
-
-Repositório com exercícios de C++ para praticar entrada de dados, estruturas condicionais e funções. Os três programas estão na pasta [Atividade](Atividade/README.md).
-
-## Organização
-
-| Caminho | Conteúdo |
-|---|---|
-| [Atividade](Atividade/README.md) | Três exercícios com código-fonte e executáveis `.exe`. |
-| [teste_codigo.cpp](teste_codigo.cpp) | Arquivo de teste que contém apenas o comentário `//teste`. |
-| [teste.txt](teste.txt) | Arquivo vazio. |
-
-## Exercícios
-
-| Código-fonte | Entrada | Regra aplicada |
-|---|---|---|
-| [exercicio_01.cpp](Atividade/exercicio_01.cpp) | Uma idade inteira | Idades menores que 18 são classificadas como “Menor de idade.”; as demais, como “Maior de idade.” |
-| [exercicio_02.cpp](Atividade/exercicio_02.cpp) | Um número inteiro | Verifica se o número pertence ao intervalo de 10 a 20, incluindo os dois limites. A função recebe um ponteiro para o número. |
-| [exercicio_03.cpp](Atividade/exercicio_03.cpp) | Um número do tipo `float` | Informa se o número é positivo, negativo ou zero. A função recebe o número por valor. |
-
-## Compilação e execução
-
-Cada exercício tem sua própria função `main` e deve ser compilado separadamente. Com `g++` disponível, execute os comandos abaixo na raiz do repositório, em um terminal Bash:
+**Pré-requisito:** `g++` instalado e disponível no terminal. Na raiz do repositório:
 
 ```bash
-mkdir -p /tmp/aula-github-teste
-g++ Atividade/exercicio_01.cpp -o /tmp/aula-github-teste/idade
-/tmp/aula-github-teste/idade
+g++ Atividade/exercicio_01.cpp -o idade
+g++ Atividade/exercicio_02.cpp -o intervalo
+g++ Atividade/exercicio_03.cpp -o sinal
 ```
 
-Digite uma idade quando o programa solicitar. Por exemplo, `17` resulta em “Menor de idade” e `18` resulta em “Maior de idade”.
+No Linux/macOS, execute `./idade`, `./intervalo` ou `./sinal`. No Windows, use os nomes de saída com `.exe` e execute-os no terminal. Cada `.cpp` possui sua própria função `main`, portanto os arquivos não devem ser vinculados como um único programa.
 
-Os comandos geram o executável fora da pasta do repositório. Consulte o [guia da pasta Atividade](Atividade/README.md) para compilar os três programas.
+## ✅ Exemplos para conferir
 
-## Observações sobre o código-fonte
+| Programa | Entrada | Resultado esperado |
+|---|---:|---|
+| Maioridade | `17` / `18` | Menor / maior de idade |
+| Intervalo | `9` / `10` / `20` / `21` | Fora / dentro / dentro / fora |
+| Sinal | `-2` / `0` / `2` | Negativo / zero / positivo |
 
-Os programas incluem `iostream` e `locale.h` e chamam `setlocale(LC_ALL, "portuguese")`. A exibição dos acentos depende da codificação dos arquivos e da configuração do terminal.
+Os exemplos correspondem às condições presentes no código; não representam testes automatizados.
 
-O arquivo `teste_codigo.cpp` não tem uma função `main`; portanto, não é um quarto exercício executável.
+**📖 Documentação detalhada:** [guia da pasta Atividade](Atividade/README.md).
 
----
+## 🔎 Notas técnicas
 
-## Trilha visual de execução
-
-```mermaid
-flowchart TD
-    A["Escolher um dos três exercícios"] --> B["Compilar o arquivo .cpp"]
-    B --> C["Executar no terminal"]
-    C --> D{"Qual exercício?"}
-    D -->|1| E["Idade: menor ou maior"]
-    D -->|2| F["Intervalo: de 10 a 20"]
-    D -->|3| G["Sinal: positivo, negativo ou zero"]
-```
-
-## Compilação rápida no Windows (Git Bash / PowerShell)
-
-Os comandos abaixo partem da **raiz do repositório**. É necessário ter `g++` no `PATH` (por exemplo, por meio do MSYS2/MinGW-w64):
-
-```bash
-g++ Atividade/exercicio_01.cpp -o idade.exe
-g++ Atividade/exercicio_02.cpp -o intervalo.exe
-g++ Atividade/exercicio_03.cpp -o sinal.exe
-```
-
-Execute o programa desejado com `./idade.exe`, `./intervalo.exe` ou `./sinal.exe`. Os três arquivos possuem `main` próprio: **não** compile todos juntos em um único executável.
-
-## Matriz de aprendizado
-
-| Conceito | Exercício | Onde verificar |
-|---|---|---|
-| Condicionais `if/else` | Maioridade | [exercicio_01.cpp](Atividade/exercicio_01.cpp) |
-| Função `void` e ponteiro `int*` | Intervalo | [exercicio_02.cpp](Atividade/exercicio_02.cpp) |
-| `float` e `else if` | Sinal numérico | [exercicio_03.cpp](Atividade/exercicio_03.cpp) |
-| Guia de testes manuais | Todos | [Atividade/README.md](Atividade/README.md) |
-
-## Perguntas frequentes
-
-**Preciso executar os arquivos `.exe` que já estão no GitHub?** Não. Você pode recompilar os `.cpp` com seu compilador. **Onde ficam os resultados?** São impressos no terminal; os exercícios não salvam arquivos. **Funciona no VS Code?** Sim, usando a extensão C/C++ ou o terminal integrado com `g++` instalado.
-
-> **Rastreabilidade:** as regras acima correspondem aos arquivos-fonte citados; não representam funcionalidades adicionais.
+- A codificação e o terminal podem influenciar a exibição de acentos após `setlocale`.
+- Os exercícios não tratam explicitamente entradas não numéricas.
+- Para compreender o uso de ponteiros, compare `resultado(&n)` no exercício 02 com `resultado(n)` no exercício 03.
