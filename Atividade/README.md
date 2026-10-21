@@ -1,116 +1,47 @@
-# Atividade — Condicionais e funções em C++
+# 📘 Atividades — condicionais e funções
 
-[Voltar ao README principal](../README.md)
+[← Voltar ao repositório](../README.md)
 
-## 🎮 Laboratório de decisões
+Três exercícios independentes de programação em C++. Cada fonte possui `main()` e recebe entradas pelo terminal.
 
-> **Missão:** Transforme cada caso de teste em uma hipótese e confronte-a com a condição implementada nos arquivos C++. **XP = metas simbólicas de aprendizagem**, sem registro automático.
+## Exercícios
 
-| Etapa | Desafio verificável | Evidência original | XP |
-|---|---|---|--:|
-| 01 · Maioridade | Testar 17 e 18 e justificar o limite | [idade](exercicio_01.cpp) | 20 |
-| 02 · Intervalo | Testar 9, 10, 20 e 21 | [intervalo](exercicio_02.cpp) | 30 |
-| 03 · Sinal | Testar negativo, zero e positivo | [sinal](exercicio_03.cpp) | 30 |
+| Arquivo | Entrada | Condição central | Técnica |
+|---|---|---|---|
+| [exercicio_01.cpp](exercicio_01.cpp) | Idade inteira | `idade < 18` | `if/else` |
+| [exercicio_02.cpp](exercicio_02.cpp) | Inteiro | `*n >= 10 && *n <= 20` | Ponteiro e função `void` |
+| [exercicio_03.cpp](exercicio_03.cpp) | Decimal (`float`) | `n > 0`, `n < 0` ou `0` | Parâmetro por valor |
 
-**Checklist de progresso**
+## ⚙️ Compilar separadamente
 
-- [ ] Identifiquei o ponto de decisão em cada programa.
-- [ ] Compilei cada arquivo separadamente.
-- [ ] Confrontei os resultados com a tabela de casos de teste.
-
-<details>
-<summary><strong>🏆 Abrir desafio de evolução</strong></summary>
-
-Desafio avançado (a implementar): adicionar validação de entrada não numérica a uma cópia local do programa.
-
-**Critério de conclusão:** explique o que mudou, vincule o arquivo afetado e demonstre o comportamento com entradas de teste.
-
-</details>
-
-**Nota de rigor:** Os arquivos não possuem suíte automatizada; conclusões dependem da execução e análise manual.
-
----
-
-
-Esta pasta reúne três exercícios independentes. Cada arquivo `.cpp` contém sua própria função `main` e tem um executável `.exe` correspondente no repositório.
-
-## Conteúdo dos exercícios
-
-| Arquivo | O que o programa faz | Conceitos presentes |
-|---|---|---|
-| [exercicio_01.cpp](exercicio_01.cpp) | Lê uma idade inteira e compara o valor com 18. | Entrada com `cin`, saída com `cout` e `if/else`. |
-| [exercicio_02.cpp](exercicio_02.cpp) | Verifica se um inteiro está no intervalo inclusivo de 10 a 20. | Função `resultado(int *n)`, ponteiro e operador lógico `&&`. |
-| [exercicio_03.cpp](exercicio_03.cpp) | Classifica um número como positivo, negativo ou zero. | Tipo `float`, função com passagem por valor e `if/else if/else`. |
-
-## Compilar
-
-Execute os comandos abaixo a partir da raiz do repositório, em um terminal Bash com `g++` disponível:
+Na raiz do repositório, com `g++` disponível:
 
 ```bash
-mkdir -p /tmp/aula-github-teste
-g++ Atividade/exercicio_01.cpp -o /tmp/aula-github-teste/idade
-g++ Atividade/exercicio_02.cpp -o /tmp/aula-github-teste/intervalo
-g++ Atividade/exercicio_03.cpp -o /tmp/aula-github-teste/sinal
+g++ Atividade/exercicio_01.cpp -o idade
+g++ Atividade/exercicio_02.cpp -o intervalo
+g++ Atividade/exercicio_03.cpp -o sinal
 ```
 
-## Executar e conferir
+Cada comando gera **um** programa; não compile os três fontes juntos.
 
-Escolha um dos executáveis:
+## 🧪 Casos de teste manuais
 
-```bash
-/tmp/aula-github-teste/idade
-/tmp/aula-github-teste/intervalo
-/tmp/aula-github-teste/sinal
-```
-
-Cada programa solicita um número e termina após apresentar o resultado.
-
-| Exercício | Entradas de exemplo | Classificações correspondentes |
-|---|---|---|
-| Idade | `17` e `18` | Menor de idade e maior de idade. |
-| Intervalo | `9`, `10`, `20` e `21` | Fora, dentro, dentro e fora do intervalo. |
-| Sinal | `5`, `-5` e `0` | Positivo, negativo e zero. |
-
-Os comandos de compilação usam os arquivos-fonte e preservam os arquivos `.exe` já existentes na pasta.
-
----
-
-## Casos de teste recomendados
-
-Testes simples de fronteira ajudam a conferir os critérios implementados sem alterar os programas:
-
-| Arquivo | Entrada | Resultado esperado pela condição |
+| Cenário | Entrada | Resultado conforme o código |
 |---|---:|---|
-| [Exercício 01](exercicio_01.cpp) | `17` | Menor de idade |
-| [Exercício 01](exercicio_01.cpp) | `18` | Maior de idade |
-| [Exercício 02](exercicio_02.cpp) | `9` | Fora do intervalo |
-| [Exercício 02](exercicio_02.cpp) | `10` | Dentro do intervalo |
-| [Exercício 02](exercicio_02.cpp) | `20` | Dentro do intervalo |
-| [Exercício 02](exercicio_02.cpp) | `21` | Fora do intervalo |
-| [Exercício 03](exercicio_03.cpp) | `-0.5` | Negativo |
-| [Exercício 03](exercicio_03.cpp) | `0` | Zero |
-| [Exercício 03](exercicio_03.cpp) | `0.5` | Positivo |
+| Idade abaixo do limite | `17` | Menor de idade |
+| Idade no limite | `18` | Maior de idade |
+| Antes do intervalo | `9` | Fora |
+| Limite inferior | `10` | Dentro |
+| Limite superior | `20` | Dentro |
+| Depois do intervalo | `21` | Fora |
+| Número negativo | `-3` | Negativo |
+| Número neutro | `0` | Zero |
+| Número positivo | `3` | Positivo |
 
-## Relação entre conceitos e arquivos
+## 💡 Conceitos fundamentais
 
-```mermaid
-flowchart LR
-    A["Entrada com cin"] --> B{"Decisão"}
-    B --> C["Idade · if / else"]
-    B --> D["Intervalo · && e ponteiro"]
-    B --> E["Sinal · if / else if"]
-    C --> F["Saída com cout"]
-    D --> F
-    E --> F
-```
+**Ponteiro:** no exercício 02, `resultado(&n)` envia o endereço da variável; a função acessa seu valor com `*n`. **Passagem por valor:** no exercício 03, `resultado(n)` recebe uma cópia do número. Em ambos, a classificação é exibida com `cout`.
 
-### No Windows com Git Bash
+## 📌 Limitações
 
-Instale um compilador compatível, como `g++` via [MSYS2](https://www.msys2.org/), e execute os comandos na raiz do repositório:
-
-```bash
-g++ Atividade/exercicio_01.cpp -o idade.exe
-./idade.exe
-```
-
-Os exercícios **não possuem testes automatizados** e não validam explicitamente entradas não numéricas. Para contexto e índice, consulte [o README principal](../README.md).
+Os programas não persistem dados, não oferecem testes automatizados e não têm tratamento específico para entradas não numéricas. Os arquivos `.exe` presentes na pasta são artefatos compilados; para estudar a implementação, utilize os `.cpp`.
