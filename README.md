@@ -2,6 +2,43 @@
 
 ![Linguagem](https://img.shields.io/badge/Linguagem-C%2FC%2B%2B-00599C?logo=cplusplus&logoColor=white) ![Conteúdo](https://img.shields.io/badge/Conte%C3%BAdo-Acad%C3%AAmico-blue)
 
+
+## 🕹️ Trilha de desafios · Fundamentos de programação
+
+> **Sua missão:** dominar decisões em C++ por meio de três pequenos programas. Os pontos abaixo são **XP didáticos** para acompanhar seu estudo; não são registrados automaticamente pelo GitHub.
+
+| Nível | Missão prática | Evidência no código | XP |
+|:--:|---|---|--:|
+| 01 · Explorador | Compilar o teste de maioridade e verificar entradas 17 e 18 | [`exercicio_01.cpp`](Atividade/exercicio_01.cpp) | 20 |
+| 02 · Analista | Testar os limites 9, 10, 20 e 21 | [`exercicio_02.cpp`](Atividade/exercicio_02.cpp) | 30 |
+| 03 · Decisor | Conferir positivo, negativo e zero | [`exercicio_03.cpp`](Atividade/exercicio_03.cpp) | 30 |
+| Bônus · Mentor | Explicar por que `resultado(&n)` passa um endereço | [`exercicio_02.cpp`](Atividade/exercicio_02.cpp) | 20 |
+
+**Progresso manual**
+
+- [ ] Compilar os três arquivos individualmente.
+- [ ] Testar os limites de cada condicional.
+- [ ] Explicar a diferença entre passagem por ponteiro e por valor.
+- [ ] Consultar os [casos de teste documentados](Atividade/README.md).
+
+<details>
+<summary><strong>🏅 Conquistas e critérios de conclusão</strong></summary>
+
+| Conquista | Critério |
+|---|---|
+| 🥉 Primeira compilação | Executar o exercício de idade com sucesso |
+| 🥈 Mestre das condições | Justificar os resultados nos limites 10 e 20 |
+| 🥇 Trio concluído | Compilar e testar os três exercícios |
+| 💎 Código compreendido | Explicar ponteiros e passagem de parâmetros |
+
+Esses títulos são marcos de estudo, **não certificados ou verificações automáticas**.
+
+</details>
+
+**🧩 Desafio extra:** modifique uma cópia local do exercício de idade para rejeitar números negativos; a validação ainda não existe no fonte original.
+
+---
+
 Repositório com exercícios de C++ para praticar entrada de dados, estruturas condicionais e funções. Os três programas estão na pasta [Atividade](Atividade/README.md).
 
 ## Organização
