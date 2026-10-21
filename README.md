@@ -1,20 +1,18 @@
-# 🧩 Fundamentos de programação — exercícios em C++
+# 🧩 Exercícios de programação em C++
 
-Repositório acadêmico com três exercícios independentes de **entrada e saída, estruturas condicionais, funções e ponteiros**. Os exemplos foram escritos em arquivos `.cpp` e podem ser compilados separadamente com `g++`.
+Repositório acadêmico com três programas independentes para praticar **entrada de dados, estruturas condicionais, funções e passagem de parâmetros**. Cada exercício possui seu próprio arquivo `.cpp` e pode ser executado no terminal.
 
-[![C++](https://img.shields.io/badge/Linguagem-C%2B%2B-00599C?logo=cplusplus&logoColor=white)](https://isocpp.org/) [![GitHub](https://img.shields.io/badge/Plataforma-GitHub-181717?logo=github)](https://github.com/theroven79-droid/AULA-GITHUB-TESTE)
+## 📚 Exercícios disponíveis
 
-## 📌 Visão geral
-
-| Exercício | Conceito | Comportamento | Código |
+| Exercício | Objetivo | Conceitos utilizados | Código |
 |---|---|---|---|
-| 01 — Maioridade | `if/else` | Classifica idades menores que 18 como menores de idade. | [exercicio_01.cpp](Atividade/exercicio_01.cpp) |
-| 02 — Intervalo | Ponteiro e `&&` | Verifica se um número está no intervalo **inclusivo** de 10 a 20. | [exercicio_02.cpp](Atividade/exercicio_02.cpp) |
-| 03 — Sinal | `float` e `else if` | Identifica número positivo, negativo ou igual a zero. | [exercicio_03.cpp](Atividade/exercicio_03.cpp) |
+| 01 — Maioridade | Identificar se uma idade é menor ou maior ou igual a 18 anos. | `if/else`, `cin` e `cout` | [`exercicio_01.cpp`](Atividade/exercicio_01.cpp) |
+| 02 — Intervalo | Verificar se um inteiro pertence ao intervalo de 10 a 20, incluindo os limites. | Ponteiros, função `void` e operador `&&` | [`exercicio_02.cpp`](Atividade/exercicio_02.cpp) |
+| 03 — Sinal numérico | Classificar um valor como positivo, negativo ou zero. | `float`, `if/else if/else` | [`exercicio_03.cpp`](Atividade/exercicio_03.cpp) |
 
-Os programas usam `cin`, `cout`, `locale.h` e `setlocale`. O resultado é apresentado no terminal, sem persistência em arquivos ou banco de dados.
+O arquivo [`Atividade/README.md`](Atividade/README.md) apresenta explicações e casos de teste de cada programa.
 
-## 📂 Estrutura
+## 📂 Organização
 
 ```text
 AULA-GITHUB-TESTE/
@@ -28,11 +26,11 @@ AULA-GITHUB-TESTE/
 └── teste.txt
 ```
 
-A pasta `Atividade` também contém executáveis `.exe`. `teste_codigo.cpp` é somente um arquivo de teste, sem `main`, e `teste.txt` está vazio.
+A pasta `Atividade/` também contém os executáveis `.exe` já compilados. O arquivo `teste_codigo.cpp` não possui função `main`, e `teste.txt` está vazio.
 
 ## ⚙️ Compilação e execução
 
-**Pré-requisito:** `g++` instalado e disponível no terminal. Na raiz do repositório:
+**Pré-requisito:** compilador `g++` instalado. Na raiz do repositório:
 
 ```bash
 g++ Atividade/exercicio_01.cpp -o idade
@@ -40,22 +38,24 @@ g++ Atividade/exercicio_02.cpp -o intervalo
 g++ Atividade/exercicio_03.cpp -o sinal
 ```
 
-No Linux/macOS, execute `./idade`, `./intervalo` ou `./sinal`. No Windows, use os nomes de saída com `.exe` e execute-os no terminal. Cada `.cpp` possui sua própria função `main`, portanto os arquivos não devem ser vinculados como um único programa.
+Em Linux ou macOS, execute `./idade`, `./intervalo` ou `./sinal`. No Windows, utilize os arquivos `.exe` gerados.
+
+**Importante:** cada exercício possui uma função `main`; portanto, compile os arquivos separadamente.
 
 ## ✅ Exemplos para conferir
 
-| Programa | Entrada | Resultado esperado |
-|---|---:|---|
-| Maioridade | `17` / `18` | Menor / maior de idade |
+| Programa | Entrada | Classificação esperada |
+|---|---|---|
+| Maioridade | `17` / `18` | Menor de idade / maior de idade |
 | Intervalo | `9` / `10` / `20` / `21` | Fora / dentro / dentro / fora |
 | Sinal | `-2` / `0` / `2` | Negativo / zero / positivo |
 
-Os exemplos correspondem às condições presentes no código; não representam testes automatizados.
+Os resultados são determinados pelas condições presentes nos códigos, não por uma suíte automatizada de testes.
 
-**📖 Documentação detalhada:** [guia da pasta Atividade](Atividade/README.md).
+## 🔎 Observações técnicas
 
-## 🔎 Notas técnicas
+- Os programas utilizam `locale.h` e `setlocale`; a apresentação dos acentos pode variar conforme o terminal.
+- Não há tratamento específico para entradas não numéricas.
+- No exercício 02, `resultado(&n)` envia o endereço de uma variável; no exercício 03, `resultado(n)` passa o valor diretamente.
 
-- A codificação e o terminal podem influenciar a exibição de acentos após `setlocale`.
-- Os exercícios não tratam explicitamente entradas não numéricas.
-- Para compreender o uso de ponteiros, compare `resultado(&n)` no exercício 02 com `resultado(n)` no exercício 03.
+**[Acessar o guia detalhado dos três exercícios →](Atividade/README.md)**
