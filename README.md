@@ -32,7 +32,7 @@ Digite uma idade quando o programa solicitar. Por exemplo, `17` resulta em “Me
 
 Os comandos geram o executável fora da pasta do repositório. Consulte o [guia da pasta Atividade](Atividade/README.md) para compilar os três programas.
 
-## Observações sobre os fontes
+## Observações sobre o código-fonte
 
 Os programas incluem `iostream` e `locale.h` e chamam `setlocale(LC_ALL, "portuguese")`. A exibição dos acentos depende da codificação dos arquivos e da configuração do terminal.
 

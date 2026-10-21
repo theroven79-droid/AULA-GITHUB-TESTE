@@ -41,4 +41,4 @@ Cada programa solicita um número e termina após apresentar o resultado.
 | Intervalo | `9`, `10`, `20` e `21` | Fora, dentro, dentro e fora do intervalo. |
 | Sinal | `5`, `-5` e `0` | Positivo, negativo e zero. |
 
-Os comandos de compilação usam os fontes e preservam os arquivos `.exe` já existentes na pasta.
+Os comandos de compilação usam os arquivos-fonte e preservam os arquivos `.exe` já existentes na pasta.
