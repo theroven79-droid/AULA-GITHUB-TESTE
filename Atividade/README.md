@@ -1,41 +1,31 @@
-# 📘 Atividades — Estruturas condicionais e funções
+# 📘 Relatório da pasta — Atividade
 
-[← Página inicial do repositório](../README.md)
+[← Relatório do repositório](../README.md)
 
-Esta pasta reúne **três exercícios independentes em C++**. Cada um lê um valor pelo terminal, avalia uma condição e mostra o resultado correspondente.
+## 📌 Resumo
 
-## 📂 Arquivos e conceitos
+A pasta contém **três exercícios de C++**, voltados ao estudo das estruturas condicionais e da utilização de funções. Cada programa lê um dado informado pelo usuário, aplica uma condição e apresenta o resultado no terminal.
 
-| Arquivo | Entrada | Regra utilizada |
+## 📂 Arquivos analisados
+
+| Código-fonte | Finalidade | Conceitos |
 |---|---|---|
-| [`exercicio_01.cpp`](exercicio_01.cpp) | Número inteiro (idade) | Idade menor que 18: menor de idade; caso contrário: maior de idade. |
-| [`exercicio_02.cpp`](exercicio_02.cpp) | Número inteiro | Verifica se o valor está entre 10 e 20, inclusive. |
-| [`exercicio_03.cpp`](exercicio_03.cpp) | Número decimal (`float`) | Diferencia números positivos, negativos e iguais a zero. |
+| [`exercicio_01.cpp`](exercicio_01.cpp) | Distinguir idades menores e maiores ou iguais a 18 anos. | `cin`, `cout` e `if/else`. |
+| [`exercicio_02.cpp`](exercicio_02.cpp) | Conferir se um número inteiro está entre 10 e 20, inclusive. | Função `void`, ponteiro e operador `&&`. |
+| [`exercicio_03.cpp`](exercicio_03.cpp) | Identificar números positivos, negativos e iguais a zero. | Tipo `float` e `if/else if/else`. |
 
-O exercício 02 utiliza uma função que recebe um ponteiro (`int *`), enquanto o exercício 03 recebe uma cópia do valor (`float`).
+Também há três executáveis Windows, [`exercicio_01.exe`](exercicio_01.exe), [`exercicio_02.exe`](exercicio_02.exe) e [`exercicio_03.exe`](exercicio_03.exe), correspondentes aos exercícios.
 
-## ⚙️ Compilar
+## 🧠 Análise do conteúdo
 
-Com `g++` instalado, execute os comandos abaixo na raiz do repositório:
+No primeiro programa, a condição `idade < 18` determina a classificação. No segundo, a função `resultado` recebe o endereço de um inteiro e avalia os limites do intervalo. No terceiro, a função recebe um valor `float` e realiza três possíveis classificações.
 
-```bash
-g++ Atividade/exercicio_01.cpp -o idade
-g++ Atividade/exercicio_02.cpp -o intervalo
-g++ Atividade/exercicio_03.cpp -o sinal
-```
+| Entrada de referência | Comportamento previsto |
+|---|---|
+| Idade `17` ou `18` | Menor de idade ou maior de idade, respectivamente. |
+| Inteiros `9`, `10`, `20` e `21` | Fora, dentro, dentro e fora do intervalo. |
+| Valores `-3`, `0` e `3` | Negativo, zero e positivo. |
 
-Em Linux/macOS, execute o exercício desejado com `./idade`, `./intervalo` ou `./sinal`. Em Windows, execute o arquivo `.exe` correspondente.
+## 🔎 Considerações
 
-## 🧪 Casos de teste manuais
-
-| Exercício | Entradas de exemplo | Resultados esperados |
-|---|---|---|
-| Idade | `17`, `18` | Menor de idade; maior de idade |
-| Intervalo | `9`, `10`, `20`, `21` | Fora; dentro; dentro; fora |
-| Sinal | `-3`, `0`, `3` | Negativo; zero; positivo |
-
-## 💡 O que observar no código
-
-No exercício de intervalo, a expressão `resultado(&n)` passa o **endereço** da variável para a função, que utiliza `*n` para ler seu conteúdo. No exercício de sinal, `resultado(n)` passa o **valor** de `n`.
-
-Os programas não salvam dados em arquivos nem tratam explicitamente entradas não numéricas. Os executáveis `.exe` já presentes são artefatos compilados, não substitutos dos códigos-fonte.
+Os três programas são independentes, não possuem armazenamento persistente e não tratam explicitamente entradas inválidas. Para estudar as condições e as funções, recomenda-se consultar os arquivos-fonte; os resultados da tabela são exemplos baseados no código, não uma suíte de testes automatizados.
