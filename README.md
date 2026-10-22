@@ -1,30 +1,21 @@
-# 📂 Relatório do repositório — Exercícios de programação
+# 💻 Aula GitHub — Exercícios em C++
 
-## 📌 Visão geral
+Este repositório reúne pequenos exercícios de programação utilizados nos estudos de **C++** e na prática de organização de arquivos no GitHub. Os exemplos trabalham principalmente com entrada de dados, condições e funções, com resultados apresentados no terminal.
 
-Este repositório reúne atividades introdutórias de programação em **C++**, concentradas na pasta [`Atividade/`](Atividade/README.md). Os exemplos trabalham com leitura de dados, estruturas condicionais, funções e passagem de parâmetros. Há também dois arquivos de teste na raiz.
+## 📚 Atividades
 
-## 🗂️ Arquivos e pastas
+Na pasta [`Atividade/`](Atividade/README.md) estão três programas independentes:
 
-| Item | Conteúdo |
-|---|---|
-| [`Atividade/`](Atividade/README.md) | Três exercícios independentes, cada um com seu código-fonte e um executável Windows. |
-| [`teste_codigo.cpp`](teste_codigo.cpp) | Arquivo de teste com conteúdo mínimo, sem uma aplicação completa. |
-| [`teste.txt`](teste.txt) | Arquivo de texto vazio. |
-| `README.md` | Relatório e índice deste repositório. |
-
-## 🧠 Síntese das atividades
-
-| Programa | O que realiza | Código |
+| Exercício | O que o programa faz | Código |
 |---|---|---|
-| 01 — Maioridade | Lê uma idade e verifica se ela é inferior a 18 anos. | [`exercicio_01.cpp`](Atividade/exercicio_01.cpp) |
-| 02 — Intervalo | Verifica se um inteiro pertence ao intervalo de 10 a 20, incluindo os dois limites. | [`exercicio_02.cpp`](Atividade/exercicio_02.cpp) |
-| 03 — Sinal | Classifica um número como positivo, negativo ou zero. | [`exercicio_03.cpp`](Atividade/exercicio_03.cpp) |
+| **01 — Maioridade** | Recebe uma idade e informa se a pessoa é menor ou maior de idade. | [`exercicio_01.cpp`](Atividade/exercicio_01.cpp) |
+| **02 — Intervalo** | Verifica se um número inteiro pertence ao intervalo de 10 a 20. | [`exercicio_02.cpp`](Atividade/exercicio_02.cpp) |
+| **03 — Sinal de um número** | Identifica se um valor é positivo, negativo ou zero. | [`exercicio_03.cpp`](Atividade/exercicio_03.cpp) |
 
-Cada exercício possui uma função `main` própria e deve ser compilado separadamente. Todos apresentam os resultados no terminal, sem salvar informações em arquivos.
+## 📂 Como o repositório está organizado
 
-## 🔎 Considerações
+Além dos códigos, a pasta `Atividade/` contém executáveis `.exe` correspondentes aos exercícios. Na raiz, [`teste_codigo.cpp`](teste_codigo.cpp) e [`teste.txt`](teste.txt) são arquivos usados para testes e registros simples.
 
-Os códigos foram desenvolvidos com finalidade didática e não incluem validação específica de entradas não numéricas. Os arquivos `.exe` são versões compiladas para Windows; os arquivos `.cpp` permitem analisar a implementação.
+Os programas utilizam recursos como `cin`, `cout`, `if`, `else` e funções com parâmetros. Cada exercício tem seu próprio `main` e pode ser estudado separadamente.
 
-**Para conhecer os detalhes de cada exercício, consulte o [relatório da pasta Atividade](Atividade/README.md).**
+➡️ [Veja o resumo detalhado dos três exercícios](Atividade/README.md).
